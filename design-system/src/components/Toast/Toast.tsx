@@ -1,15 +1,15 @@
 import { useEffect } from 'react'
 import { FiX, FiCheckCircle, FiAlertCircle, FiInfo } from 'react-icons/fi'
 import { Typography } from '../Typography'
+import type { ToastVariant } from '../../types'
 
-type Variant = 'success' | 'error' | 'warning' | 'info'
 
 interface Props {
-  message: string
-  variant?: Variant
-  onClose: () => void
-  duration?: number
-}
+    message: string
+    variant: ToastVariant
+    onClose: () => void
+    duration?: number
+  }
 
 const variantIcons = {
   success: <FiCheckCircle className="text-success" size={20} />,
